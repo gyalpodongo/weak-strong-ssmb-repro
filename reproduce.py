@@ -24,7 +24,8 @@ REALISTIC_SIGMA_DELTA_R = 3.37e-3              # tracked rms spread at the radia
 
 def heating_ratio(p: Params) -> float:
     """Rev Mod 1 heating from a path error, kL^2 (A1^2 + 9 A3^2) sigma_Dz^2 / 2, over the (sigma_Dz / r56)^2 / 2
-    that Eq. 21 budgets. Above 1 because the beam at Mod 1 spans several laser periods (the sine is not linear)."""
+    per pass that reproduces the printed U0 from Eq. 21. The beam spans several laser periods at Mod 1, so the
+    Rev Mod 1 error is averaged over the laser phase."""
     return (p.kL * p.r56 * p.A1) ** 2 * (1 + 9 * p.A3_over_A1 ** 2)
 
 
