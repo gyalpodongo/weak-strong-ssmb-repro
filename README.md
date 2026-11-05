@@ -5,7 +5,7 @@ Code for our note checking the radiated power of the Weak-Strong SSMB ring (X. D
 The paper quotes 1 kW at 13.5 nm. Tracking the paper's own longitudinal model with its stated assumptions, we
 get about 645 W (runs vary by a few percent with the random seed; `results.json` has 647 W). When we model
 radiator back-action, IBS and CSR explicitly instead of through the 0.14 nm path-length budget, we get about
-3 to 70 W. That range is model-dependent: none of those models is validated against measurement (our checks
+3 to 70 W. That range is model-dependent: we have not been able to validate those models against measurement (our checks
 against MLS measurements and KARA instability thresholds did not pass).
 
 ```
@@ -72,6 +72,6 @@ Where the paper is silent we chose:
 - back-action scaled by 0.641 from a 3D radiator calculation (or normalised to the Eq. 23 power); IBS in Bane's high-energy form for a 311 m ring
 
 The CSR case uses the 1D steady-state impedance, which is outside its validity at these harmonics, so it overstates
-CSR. No Weak-Strong lattice is published, and this model doesn't need one.
+CSR. We could not find a public Weak-Strong lattice, and this 1D model does not need one.
 
 MIT license.
