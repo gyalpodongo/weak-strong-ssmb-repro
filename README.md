@@ -7,9 +7,20 @@ Plain numpy and scipy; the full run takes about 1 minute on an 8-core laptop (ab
 
 ```
 pip install -r requirements.txt
-python3 reproduce.py            # all rows, writes results.json
+python3 check.py                # 10 s self-check against the note
+python3 reproduce.py            # all rows, writes results.json (about 1 min)
 python3 reproduce.py --only paper_assumptions --particles 100000
 ```
+
+## Headline numbers (results.json, 5e4 particles)
+
+| case | power | note |
+|---|---|---|
+| paper's own assumptions | 647 W | 645 W (paper: 1 kW) |
+| realistic, no CSR | 36 W | about 35 to 40 W |
+| realistic, with 1D CSR | at the noise floor | 3 W or less |
+| Touschek lifetime, 6.2 kW scan row | 0.094 h | 0.09 h |
+| Touschek lifetime, 17 to 19 kW rows | 0.037 h | 0.04 h |
 
 ## What each row is
 
@@ -47,7 +58,7 @@ acceptance) and the acceptance a 1 h lifetime needs at the Table 1 point (1.5 to
 
 ## Not here
 
-No lattice: the paper publishes none, and this code does not need one. Numbers depend on the seed at the
+No lattice: no Weak-Strong ring lattice is published (Pan et al., PRAB 29, 103401 (2026) is a different 400 MeV single-laser ring), and this 1D model does not need one. Numbers depend on the seed at the
 few-percent level at 5e4 particles; `--particles 200000` tightens them.
 
 License: MIT.
