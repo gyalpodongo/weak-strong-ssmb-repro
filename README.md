@@ -4,7 +4,7 @@ The Weak-Strong SSMB paper (X. Deng et al., arXiv:2607.09243v1) prints 1 kW of r
 paper's own 1D model with its stated assumptions gives about 645 W. Tracking is statistical: one run lands
 anywhere from 640 to 660 W depending on the random seed, and the committed `results.json` (seed 1, 5e4
 particles) shows 647 W. So 645 W (the note) and 647 W (`results.json`) are the same result, not two results.
-Adding effects the paper leaves out or lumps (radiator back-action, IBS, radiator quantum excitation, CSR)
+Modeling explicitly the effects the paper suggests need further study (radiator back-action, IBS, radiator quantum excitation, CSR)
 brings it to about 3 to 40 W.
 
 This is the code behind the note "Weak-Strong SSMB (arXiv:2607.09243): an independent check of the power

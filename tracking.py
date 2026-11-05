@@ -6,7 +6,7 @@ One turn, starting at the FF entrance (alpha_z = 0):
     -r56, Rev Mod 1, -R56, half ring (-eta_C0/2),
     Mod 0 with damping, ring quantum excitation and IBS, ideal RF, half ring (-eta_C0/2).
 With every Options effect off this is the paper's model: lasers, damping, ring quantum excitation and the lumped
-sigma_Dz. The effects (ours, not the paper's) add what the paper leaves out or lumps; the README gives their status.
+sigma_Dz. The effects (ours, not the paper's) model explicitly what the paper folds into the sigma_Dz budget or leaves for further study; the README gives their status.
 """
 from __future__ import annotations
 
